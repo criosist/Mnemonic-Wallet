@@ -16,7 +16,7 @@ class MnemonicsViewController: BaseTabBarViewController {
     }()
     
     init() {
-        let layout = TabBarLayout(title: "Mnemonics", image: nil)
+        let layout = TabBarLayout(title: "Mnemonics", image: UIImage(named: "code"))
         
         super.init(tabBarLayout: layout)
     }
