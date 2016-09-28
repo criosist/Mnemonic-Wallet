@@ -30,4 +30,31 @@ class TabBarController: UITabBarController {
     internal override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if !userHasRegistered() {
+            presentLockedScreen(animated: true)
+        }
+    }
+    
+
+}
+
+// Registration / Locking
+extension TabBarController {
+    
+    func userHasRegistered()-> Bool {
+        return true
+    }
+    
+    func presentRegistration(animated: Bool) {
+        
+    }
+    
+    func presentLockedScreen(animated: Bool) {
+        
+    }
+    
 }
