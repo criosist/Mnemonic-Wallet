@@ -12,6 +12,7 @@ class MnemonicsViewController: BaseTabBarViewController {
     
     lazy var tableView: UITableView = {
         let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
     
@@ -33,7 +34,14 @@ class MnemonicsViewController: BaseTabBarViewController {
 extension MnemonicsViewController {
 
     func buildUI() {
-        
+        addTableView()
+    }
+    
+    private func addTableView() {
+        if tableView.superview == nil {
+            view.addSubview(tableView)
+            NSLayoutConstraint.activate(MnemonicsHelpers.constraintsForPinToSuperView(view: tableView))
+        }
     }
     
 }
