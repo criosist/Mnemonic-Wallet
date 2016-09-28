@@ -14,6 +14,8 @@
 		143826DF1D9C1D97007E0D75 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826DE1D9C1D97007E0D75 /* TabBarController.swift */; };
 		143826E21D9C2092007E0D75 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826E11D9C2092007E0D75 /* BaseTabBarViewController.swift */; };
 		143826E51D9C20C4007E0D75 /* TabBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826E41D9C20C4007E0D75 /* TabBarLayout.swift */; };
+		143826E81D9C2ACC007E0D75 /* UserAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826E71D9C2ACC007E0D75 /* UserAccessManager.swift */; };
+		143826EB1D9C2E60007E0D75 /* MnemonicsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826EA1D9C2E60007E0D75 /* MnemonicsHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		143826DE1D9C1D97007E0D75 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		143826E11D9C2092007E0D75 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		143826E41D9C20C4007E0D75 /* TabBarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarLayout.swift; sourceTree = "<group>"; };
+		143826E71D9C2ACC007E0D75 /* UserAccessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccessManager.swift; sourceTree = "<group>"; };
+		143826EA1D9C2E60007E0D75 /* MnemonicsHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnemonicsHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				143826D71D9C1085007E0D75 /* App Delegate */,
+				143826E91D9C2E47007E0D75 /* Helpers */,
 				143826E31D9C20B3007E0D75 /* Model */,
 				143826D81D9C1091007E0D75 /* View Controllers */,
 			);
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				143826E41D9C20C4007E0D75 /* TabBarLayout.swift */,
+				143826E71D9C2ACC007E0D75 /* UserAccessManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +151,14 @@
 				143826DC1D9C1D20007E0D75 /* MnemonicsViewController.swift */,
 			);
 			name = MnemonicsViewController;
+			sourceTree = "<group>";
+		};
+		143826E91D9C2E47007E0D75 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				143826EA1D9C2E60007E0D75 /* MnemonicsHelpers.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143826EB1D9C2E60007E0D75 /* MnemonicsHelpers.swift in Sources */,
 				143826E21D9C2092007E0D75 /* BaseTabBarViewController.swift in Sources */,
 				143826DD1D9C1D20007E0D75 /* MnemonicsViewController.swift in Sources */,
+				143826E81D9C2ACC007E0D75 /* UserAccessManager.swift in Sources */,
 				143826DF1D9C1D97007E0D75 /* TabBarController.swift in Sources */,
 				143826E51D9C20C4007E0D75 /* TabBarLayout.swift in Sources */,
 				143826B81D9C102D007E0D75 /* AppDelegate.swift in Sources */,

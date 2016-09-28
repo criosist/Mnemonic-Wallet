@@ -34,19 +34,22 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !userHasRegistered() {
-            presentLockedScreen(animated: true)
-        }
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        checkShouldShowRegistration()
+    }
 }
 
 // Registration / Locking
 extension TabBarController {
     
-    func userHasRegistered()-> Bool {
-        return true
+    func checkShouldShowRegistration() {
+        if !UserAccessManager.applicationHasRegisteredUserCode() {
+            presentLockedScreen(animated: true)
+        }
     }
     
     func presentRegistration(animated: Bool) {
