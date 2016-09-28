@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		143826B81D9C102D007E0D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826B71D9C102D007E0D75 /* AppDelegate.swift */; };
+		143826BF1D9C102D007E0D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143826BE1D9C102D007E0D75 /* Assets.xcassets */; };
+		143826CD1D9C102D007E0D75 /* Mnemonic_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826CC1D9C102D007E0D75 /* Mnemonic_WalletTests.swift */; };
+		143826DD1D9C1D20007E0D75 /* MnemonicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826DC1D9C1D20007E0D75 /* MnemonicsViewController.swift */; };
+		143826DF1D9C1D97007E0D75 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826DE1D9C1D97007E0D75 /* TabBarController.swift */; };
+		143826E21D9C2092007E0D75 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826E11D9C2092007E0D75 /* BaseTabBarViewController.swift */; };
+		143826E51D9C20C4007E0D75 /* TabBarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826E41D9C20C4007E0D75 /* TabBarLayout.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		143826C91D9C102D007E0D75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 143826AC1D9C102D007E0D75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 143826B31D9C102D007E0D75;
+			remoteInfo = "Mnemonic Wallet";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		143826B41D9C102D007E0D75 /* Mnemonic Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mnemonic Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		143826B71D9C102D007E0D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		143826BE1D9C102D007E0D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		143826C31D9C102D007E0D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		143826C81D9C102D007E0D75 /* Mnemonic WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mnemonic WalletTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		143826CC1D9C102D007E0D75 /* Mnemonic_WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic_WalletTests.swift; sourceTree = "<group>"; };
+		143826CE1D9C102D007E0D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		143826DC1D9C1D20007E0D75 /* MnemonicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnemonicsViewController.swift; sourceTree = "<group>"; };
+		143826DE1D9C1D97007E0D75 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		143826E11D9C2092007E0D75 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
+		143826E41D9C20C4007E0D75 /* TabBarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarLayout.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		143826B11D9C102D007E0D75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143826C51D9C102D007E0D75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		143826AB1D9C102D007E0D75 = {
+			isa = PBXGroup;
+			children = (
+				143826B61D9C102D007E0D75 /* Mnemonic Wallet */,
+				143826CB1D9C102D007E0D75 /* Mnemonic WalletTests */,
+				143826B51D9C102D007E0D75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		143826B51D9C102D007E0D75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				143826B41D9C102D007E0D75 /* Mnemonic Wallet.app */,
+				143826C81D9C102D007E0D75 /* Mnemonic WalletTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		143826B61D9C102D007E0D75 /* Mnemonic Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				143826D71D9C1085007E0D75 /* App Delegate */,
+				143826E31D9C20B3007E0D75 /* Model */,
+				143826D81D9C1091007E0D75 /* View Controllers */,
+			);
+			path = "Mnemonic Wallet";
+			sourceTree = "<group>";
+		};
+		143826CB1D9C102D007E0D75 /* Mnemonic WalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				143826CC1D9C102D007E0D75 /* Mnemonic_WalletTests.swift */,
+				143826CE1D9C102D007E0D75 /* Info.plist */,
+			);
+			path = "Mnemonic WalletTests";
+			sourceTree = "<group>";
+		};
+		143826D71D9C1085007E0D75 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				143826B71D9C102D007E0D75 /* AppDelegate.swift */,
+				143826BE1D9C102D007E0D75 /* Assets.xcassets */,
+				143826C31D9C102D007E0D75 /* Info.plist */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		143826D81D9C1091007E0D75 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				143826E01D9C2085007E0D75 /* BaseViewController */,
+				143826DB1D9C18CA007E0D75 /* TabBarController */,
+				143826DC1D9C1D20007E0D75 /* MnemonicsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		143826DB1D9C18CA007E0D75 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				143826DE1D9C1D97007E0D75 /* TabBarController.swift */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		143826E01D9C2085007E0D75 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				143826E11D9C2092007E0D75 /* BaseTabBarViewController.swift */,
+			);
+			name = BaseViewController;
+			sourceTree = "<group>";
+		};
+		143826E31D9C20B3007E0D75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				143826E41D9C20C4007E0D75 /* TabBarLayout.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		143826B31D9C102D007E0D75 /* Mnemonic Wallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143826D11D9C102E007E0D75 /* Build configuration list for PBXNativeTarget "Mnemonic Wallet" */;
+			buildPhases = (
+				143826B01D9C102D007E0D75 /* Sources */,
+				143826B11D9C102D007E0D75 /* Frameworks */,
+				143826B21D9C102D007E0D75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mnemonic Wallet";
+			productName = "Mnemonic Wallet";
+			productReference = 143826B41D9C102D007E0D75 /* Mnemonic Wallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		143826C71D9C102D007E0D75 /* Mnemonic WalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143826D41D9C102E007E0D75 /* Build configuration list for PBXNativeTarget "Mnemonic WalletTests" */;
+			buildPhases = (
+				143826C41D9C102D007E0D75 /* Sources */,
+				143826C51D9C102D007E0D75 /* Frameworks */,
+				143826C61D9C102D007E0D75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				143826CA1D9C102D007E0D75 /* PBXTargetDependency */,
+			);
+			name = "Mnemonic WalletTests";
+			productName = "Mnemonic WalletTests";
+			productReference = 143826C81D9C102D007E0D75 /* Mnemonic WalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		143826AC1D9C102D007E0D75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Sean Lintern";
+				TargetAttributes = {
+					143826B31D9C102D007E0D75 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					143826C71D9C102D007E0D75 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 143826B31D9C102D007E0D75;
+					};
+				};
+			};
+			buildConfigurationList = 143826AF1D9C102D007E0D75 /* Build configuration list for PBXProject "Mnemonic Wallet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 143826AB1D9C102D007E0D75;
+			productRefGroup = 143826B51D9C102D007E0D75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				143826B31D9C102D007E0D75 /* Mnemonic Wallet */,
+				143826C71D9C102D007E0D75 /* Mnemonic WalletTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		143826B21D9C102D007E0D75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143826BF1D9C102D007E0D75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143826C61D9C102D007E0D75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		143826B01D9C102D007E0D75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143826E21D9C2092007E0D75 /* BaseTabBarViewController.swift in Sources */,
+				143826DD1D9C1D20007E0D75 /* MnemonicsViewController.swift in Sources */,
+				143826DF1D9C1D97007E0D75 /* TabBarController.swift in Sources */,
+				143826E51D9C20C4007E0D75 /* TabBarLayout.swift in Sources */,
+				143826B81D9C102D007E0D75 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143826C41D9C102D007E0D75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143826CD1D9C102D007E0D75 /* Mnemonic_WalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		143826CA1D9C102D007E0D75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 143826B31D9C102D007E0D75 /* Mnemonic Wallet */;
+			targetProxy = 143826C91D9C102D007E0D75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		143826CF1D9C102E007E0D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		143826D01D9C102E007E0D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		143826D21D9C102E007E0D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mnemonic Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seanlintern.Mnemonic-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		143826D31D9C102E007E0D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mnemonic Wallet/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seanlintern.Mnemonic-Wallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		143826D51D9C102E007E0D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mnemonic WalletTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seanlintern.Mnemonic-WalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mnemonic Wallet.app/Mnemonic Wallet";
+			};
+			name = Debug;
+		};
+		143826D61D9C102E007E0D75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Mnemonic WalletTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seanlintern.Mnemonic-WalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mnemonic Wallet.app/Mnemonic Wallet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		143826AF1D9C102D007E0D75 /* Build configuration list for PBXProject "Mnemonic Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143826CF1D9C102E007E0D75 /* Debug */,
+				143826D01D9C102E007E0D75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		143826D11D9C102E007E0D75 /* Build configuration list for PBXNativeTarget "Mnemonic Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143826D21D9C102E007E0D75 /* Debug */,
+				143826D31D9C102E007E0D75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		143826D41D9C102E007E0D75 /* Build configuration list for PBXNativeTarget "Mnemonic WalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143826D51D9C102E007E0D75 /* Debug */,
+				143826D61D9C102E007E0D75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 143826AC1D9C102D007E0D75 /* Project object */;
+}
