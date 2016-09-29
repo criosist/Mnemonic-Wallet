@@ -49,7 +49,7 @@ extension TabBarController {
     
     func checkShouldShowRegistration() {
         if !UserAccessManager.applicationHasRegisteredUserCode() {
-            presentLockedScreen(animated: true)
+            presentRegistration(animated: true)
         }
     }
     

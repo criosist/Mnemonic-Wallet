@@ -139,6 +139,7 @@
 		143826E31D9C20B3007E0D75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				146DFD0B1D9D340700889DE9 /* Core Data */,
 				143826E41D9C20C4007E0D75 /* TabBarLayout.swift */,
 				143826E71D9C2ACC007E0D75 /* UserAccessManager.swift */,
 			);
@@ -159,6 +160,13 @@
 				143826EA1D9C2E60007E0D75 /* MnemonicsHelpers.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		146DFD0B1D9D340700889DE9 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +463,7 @@
 				143826D31D9C102E007E0D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		143826D41D9C102E007E0D75 /* Build configuration list for PBXNativeTarget "Mnemonic WalletTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +472,7 @@
 				143826D61D9C102E007E0D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
