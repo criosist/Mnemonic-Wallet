@@ -10,11 +10,18 @@ import UIKit
 
 class MnemonicsViewController: BaseTabBarViewController {
     
-    lazy var tableView: UITableView = {
+    internal lazy var tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
+        table.backgroundColor = .orange
         return table
     }()
+    
+    internal var tabBarHeight: CGFloat {
+        get {
+            return tabBarController?.tabBar.frame.height ?? 0
+        }
+    }
     
     init() {
         let layout = TabBarLayout(title: "Mnemonics", image: UIImage(named: "code"))
@@ -35,12 +42,14 @@ extension MnemonicsViewController {
 
     func buildUI() {
         addTableView()
+        
+        view.backgroundColor = .purple
     }
     
     private func addTableView() {
         if tableView.superview == nil {
             view.addSubview(tableView)
-            NSLayoutConstraint.activate(MnemonicsHelpers.constraintsForPinToSuperView(view: tableView))
+            NSLayoutConstraint.activate(MnemonicsHelpers.constraintsForPinToSuperViewWithPadding(view: tableView, upPadding: 0, downPadding: tabBarHeight, leftPadding: 0, rightPadding: 0))
         }
     }
     
