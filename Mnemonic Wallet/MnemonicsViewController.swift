@@ -13,7 +13,6 @@ class MnemonicsViewController: BaseTabBarViewController {
     internal lazy var tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.backgroundColor = .orange
         return table
     }()
     
@@ -43,7 +42,6 @@ extension MnemonicsViewController {
     func buildUI() {
         addTableView()
         
-        view.backgroundColor = .purple
     }
     
     private func addTableView() {
