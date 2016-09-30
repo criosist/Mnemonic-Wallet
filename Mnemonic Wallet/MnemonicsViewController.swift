@@ -22,6 +22,11 @@ class MnemonicsViewController: BaseTabBarViewController {
         }
     }
     
+    lazy var tableViewSource: MnemonicsTableViewManager = {
+        let source = MnemonicsTableViewManager()
+        return source
+    }()
+    
     init() {
         let layout = TabBarLayout(title: "Mnemonics", image: UIImage(named: "code"))
         
@@ -42,6 +47,7 @@ extension MnemonicsViewController {
     func buildUI() {
         addTableView()
         
+        configureTableView(table: tableView)
     }
     
     private func addTableView() {
@@ -51,4 +57,8 @@ extension MnemonicsViewController {
         }
     }
     
+    private func configureTableView(table: UITableView) {
+        table.delegate = tableViewSource
+        table.dataSource = tableViewSource
+    }
 }
