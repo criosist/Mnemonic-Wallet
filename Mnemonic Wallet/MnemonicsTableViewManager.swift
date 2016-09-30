@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import CoreData
+
+class MnemonicsFetchResultsController: NSFetchedResultsController<Mnemonic> {
+    
+}
 
 class MnemonicsTableViewManager: NSObject {
+    
+    lazy var dataSource: MnemonicsFetchResultsController = {
+        let fetchResultsController = MnemonicsFetchResultsController()
+        return fetchResultsController
+    }()
     
 }
 
@@ -19,11 +29,11 @@ extension MnemonicsTableViewManager: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return dataSource.fetchedObjects?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
