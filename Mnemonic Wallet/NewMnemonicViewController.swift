@@ -29,7 +29,7 @@ class NewMnemonicViewController: UIViewController {
     }
     
     func validateMnemonicWord(word: String) -> Bool {
-        return true
+        return false
     }
     
     func addButtonPressed(word: String?) {
@@ -42,14 +42,25 @@ class NewMnemonicViewController: UIViewController {
     
     func attempToAddMnemomicWord(word: String) {
         if validateMnemonicWord(word: word) {
-            potentialMnemonic.appendMnemonic(word: word)
+            addNewMnemonic(word: word)
         } else {
             showErronousMnemonicAlert()
         }
     }
     
+    func addNewMnemonic(word: String) {
+        potentialMnemonic.appendMnemonic(word: word)
+        clearTextField()
+    }
+    
+    func clearTextField() {
+        inputField.text = ""
+    }
+    
     func showErronousMnemonicAlert() {
-        
+        let errorAlert = UIAlertController(title: "Error", message: "The word contains illegal characters. (Allowed characters are a - z)", preferredStyle: .alert)
+        errorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(errorAlert, animated: true, completion: nil)
     }
 }
 
