@@ -12,4 +12,8 @@ struct PotentialMnemonic {
     var title: String?
     var description: String?
     var mnemonic: [String]?
+    
+    func appendMnemonic(word: String) {
+        
+    }
 }
