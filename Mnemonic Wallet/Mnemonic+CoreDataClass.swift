@@ -11,6 +11,8 @@ import CoreData
 
 
 public class Mnemonic: NSManagedObject {
+    
+    private static let MNEMONIC_SEPERATOR: String = "|"
 
     class func storePotentialMnemonic(newPotentialMnemonic: PotentialMnemonic) {
         let _ = createMnemonicFromPotentialMnemonic(potentialMnemonic: newPotentialMnemonic)
@@ -18,7 +20,8 @@ public class Mnemonic: NSManagedObject {
     }
     
     private class func encodeMnemonic(mnemonicArray: [String]) -> String {
-        return ""
+        let encodedMnemonic = mnemonicArray.joined(separator: MNEMONIC_SEPERATOR)
+        return encodedMnemonic
     }
     
     private class func createMnemonicFromPotentialMnemonic(potentialMnemonic: PotentialMnemonic) -> Mnemonic? {
@@ -45,5 +48,13 @@ public class Mnemonic: NSManagedObject {
     
     private class func createNewMnomonic(context: NSManagedObjectContext) -> Mnemonic {
         return NSEntityDescription.insertNewObject(forEntityName: String(describing: Mnemonic.self), into: context) as! Mnemonic
+    }
+    
+    func visualStringRepresentation() -> String? {
+        return mnemonicEncoded?.replacingOccurrences(of: Mnemonic.MNEMONIC_SEPERATOR, with: " ")
+    }
+    
+    func mnemonicArray() -> [String]? {
+        return mnemonicEncoded?.components(separatedBy: Mnemonic.MNEMONIC_SEPERATOR)
     }
 }
