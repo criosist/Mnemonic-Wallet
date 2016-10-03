@@ -11,7 +11,7 @@ import CoreData
 
 class CoreDataManager: NSObject {
     
-    static let sharedCoreDataManager: CoreDataManager = CoreDataManager()
+    static let shared: CoreDataManager = CoreDataManager()
     
     /// managed object model
     private lazy var managedObjectModel: NSManagedObjectModel = {
@@ -57,7 +57,7 @@ class CoreDataManager: NSObject {
     
     func save() {
         do {
-            try CoreDataManager.sharedCoreDataManager.managedObjectContext.save()
+            try CoreDataManager.shared.managedObjectContext.save()
         } catch {
             fatalError("Failed to save core data context: \(error)")
         }

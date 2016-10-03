@@ -17,10 +17,11 @@
 		143826E81D9C2ACC007E0D75 /* UserAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826E71D9C2ACC007E0D75 /* UserAccessManager.swift */; };
 		143826EB1D9C2E60007E0D75 /* MnemonicsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143826EA1D9C2E60007E0D75 /* MnemonicsHelpers.swift */; };
 		146DFD0E1D9D392200889DE9 /* MnemonicDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD0C1D9D392200889DE9 /* MnemonicDataModel.xcdatamodeld */; };
-		146DFD111D9D3A1600889DE9 /* Mnemonic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD0F1D9D3A1600889DE9 /* Mnemonic+CoreDataClass.swift */; };
-		146DFD121D9D3A1600889DE9 /* Mnemonic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD101D9D3A1600889DE9 /* Mnemonic+CoreDataProperties.swift */; };
 		146DFD141D9D3A8900889DE9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD131D9D3A8900889DE9 /* CoreDataManager.swift */; };
 		146DFD191D9E9C6700889DE9 /* MnemonicsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD181D9E9C6700889DE9 /* MnemonicsTableViewManager.swift */; };
+		146DFD1B1DA2BCB500889DE9 /* PotentialMnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD1A1DA2BCB500889DE9 /* PotentialMnemonic.swift */; };
+		146DFD1E1DA2C04500889DE9 /* Mnemonic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD1C1DA2C04500889DE9 /* Mnemonic+CoreDataClass.swift */; };
+		146DFD1F1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD1D1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +49,11 @@
 		143826E71D9C2ACC007E0D75 /* UserAccessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccessManager.swift; sourceTree = "<group>"; };
 		143826EA1D9C2E60007E0D75 /* MnemonicsHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnemonicsHelpers.swift; sourceTree = "<group>"; };
 		146DFD0D1D9D392200889DE9 /* MnemonicDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MnemonicDataModel.xcdatamodel; sourceTree = "<group>"; };
-		146DFD0F1D9D3A1600889DE9 /* Mnemonic+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Mnemonic+CoreDataClass.swift"; path = "../Mnemonic+CoreDataClass.swift"; sourceTree = "<group>"; };
-		146DFD101D9D3A1600889DE9 /* Mnemonic+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Mnemonic+CoreDataProperties.swift"; path = "../Mnemonic+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		146DFD131D9D3A8900889DE9 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		146DFD181D9E9C6700889DE9 /* MnemonicsTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MnemonicsTableViewManager.swift; sourceTree = "<group>"; };
+		146DFD1A1DA2BCB500889DE9 /* PotentialMnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PotentialMnemonic.swift; sourceTree = "<group>"; };
+		146DFD1C1DA2C04500889DE9 /* Mnemonic+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mnemonic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		146DFD1D1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mnemonic+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				146DFD0B1D9D340700889DE9 /* Core Data */,
 				143826E41D9C20C4007E0D75 /* TabBarLayout.swift */,
+				146DFD1A1DA2BCB500889DE9 /* PotentialMnemonic.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -175,10 +178,10 @@
 		146DFD0B1D9D340700889DE9 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				146DFD1C1DA2C04500889DE9 /* Mnemonic+CoreDataClass.swift */,
+				146DFD1D1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift */,
 				146DFD131D9D3A8900889DE9 /* CoreDataManager.swift */,
 				146DFD0C1D9D392200889DE9 /* MnemonicDataModel.xcdatamodeld */,
-				146DFD0F1D9D3A1600889DE9 /* Mnemonic+CoreDataClass.swift */,
-				146DFD101D9D3A1600889DE9 /* Mnemonic+CoreDataProperties.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -296,15 +299,16 @@
 				143826EB1D9C2E60007E0D75 /* MnemonicsHelpers.swift in Sources */,
 				143826E21D9C2092007E0D75 /* BaseTabBarViewController.swift in Sources */,
 				143826DD1D9C1D20007E0D75 /* MnemonicsViewController.swift in Sources */,
-				146DFD111D9D3A1600889DE9 /* Mnemonic+CoreDataClass.swift in Sources */,
+				146DFD1F1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift in Sources */,
+				146DFD1B1DA2BCB500889DE9 /* PotentialMnemonic.swift in Sources */,
 				143826E81D9C2ACC007E0D75 /* UserAccessManager.swift in Sources */,
 				146DFD191D9E9C6700889DE9 /* MnemonicsTableViewManager.swift in Sources */,
 				143826DF1D9C1D97007E0D75 /* TabBarController.swift in Sources */,
 				143826E51D9C20C4007E0D75 /* TabBarLayout.swift in Sources */,
-				146DFD121D9D3A1600889DE9 /* Mnemonic+CoreDataProperties.swift in Sources */,
 				143826B81D9C102D007E0D75 /* AppDelegate.swift in Sources */,
 				146DFD0E1D9D392200889DE9 /* MnemonicDataModel.xcdatamodeld in Sources */,
 				146DFD141D9D3A8900889DE9 /* CoreDataManager.swift in Sources */,
+				146DFD1E1DA2C04500889DE9 /* Mnemonic+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
