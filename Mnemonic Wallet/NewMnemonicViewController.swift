@@ -12,7 +12,25 @@ class NewMnemonicViewController: UIViewController {
     
     var potentialMnemonic = PotentialMnemonic()
     
-    lazy var inputField: UITextField = {
+    lazy var titleField: UITextField = {
+        let field = UITextField()
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.applyBorder(color: .black, width: 1)
+        field.applyCornerRadius(radius: 5)
+        field.delegate = self
+        return field
+    }()
+    
+    lazy var descriptionField: UITextField = {
+        let field = UITextField()
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.applyBorder(color: .black, width: 1)
+        field.applyCornerRadius(radius: 5)
+        field.delegate = self
+        return field
+    }()
+    
+    lazy var mnemonicField: UITextField = {
         let field = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.applyBorder(color: .black, width: 1)
@@ -57,11 +75,11 @@ class NewMnemonicViewController: UIViewController {
     
     func addNewMnemonic(word: String) {
         potentialMnemonic.appendMnemonic(word: word)
-        clearTextField()
+        clearTextField(field: mnemonicField)
     }
     
-    func clearTextField() {
-        inputField.text = ""
+    func clearTextField(field: UITextField) {
+        field.text = ""
     }
     
     func showErronousMnemonicAlert() {
@@ -115,9 +133,9 @@ extension NewMnemonicViewController {
     }
     
     private func addTextfield() {
-        if inputField.superview == nil {
-            view.addSubview(inputField)
-            NSLayoutConstraint.activate(constraintsForTextField(field: inputField, toQRButton: qrButton))
+        if mnemonicField.superview == nil {
+            view.addSubview(mnemonicField)
+            NSLayoutConstraint.activate(constraintsForTextField(field: mnemonicField, toQRButton: qrButton))
         }
     }
     
