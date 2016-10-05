@@ -20,6 +20,14 @@ class NewMnemonicViewController: UIViewController {
         field.delegate = self
         return field
     }()
+    
+    lazy var qrButton: UIButton = {
+        let qrButton = UIButton(type: .custom)
+        qrButton.translatesAutoresizingMaskIntoConstraints = false
+        qrButton.backgroundColor = .purple
+        qrButton.addTarget(self, action: #selector(qrButtonPress), for: UIControlEvents.touchUpInside)
+        return qrButton
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +35,6 @@ class NewMnemonicViewController: UIViewController {
         setupUI()
     }
 
-    private func setupUI() {
-        view.backgroundColor = .white
-        
-        addQRButton()
-        addTextfield()
-    }
-    
-    private func addTextfield() {
-        if inputField.superview == nil {
-            view.addSubview(inputField)
-            NSLayoutConstraint.activate(constraintsForTextField(field: inputField))
-        }
-    }
-    
-    private func addQRButton() {
-        
-    }
-    
     func validateMnemonicWord(word: String) -> Bool {
         return false
     }
@@ -81,6 +71,15 @@ class NewMnemonicViewController: UIViewController {
     }
 }
 
+// QR Button
+extension NewMnemonicViewController {
+    
+    func qrButtonPress() {
+        
+    }
+    
+}
+
 // TextField Delegate
 extension NewMnemonicViewController: UITextFieldDelegate {
     
@@ -105,15 +104,40 @@ extension NewMnemonicViewController: UITextFieldDelegate {
     }
 }
 
+// UI Setup
+extension NewMnemonicViewController {
+    
+    func setupUI() {
+        view.backgroundColor = .white
+        
+        addQRButton()
+        addTextfield()
+    }
+    
+    private func addTextfield() {
+        if inputField.superview == nil {
+            view.addSubview(inputField)
+            NSLayoutConstraint.activate(constraintsForTextField(field: inputField, toQRButton: qrButton))
+        }
+    }
+    
+    private func addQRButton() {
+        if qrButton.superview == nil {
+            view.addSubview(qrButton)
+            NSLayoutConstraint.activate(constraintsForQRButton(button: qrButton))
+        }
+    }
+}
+
 // Custom Constraints
 extension NewMnemonicViewController {
     
-    func constraintsForTextField(field: UITextField) -> [NSLayoutConstraint] {
+    func constraintsForTextField(field: UITextField, toQRButton: UIButton) -> [NSLayoutConstraint] {
         var constraints = [NSLayoutConstraint]()
         
-        let views = ["field": field]
+        let views = ["field": field, "button": toQRButton]
         
-        let horizontalConstraintsVisualFormat = "H:|-\(10)-[field]-\(10)-|"
+        let horizontalConstraintsVisualFormat = "H:|-\(10)-[field]-\(10)-[button]"
         let verticalConstraintsVisualFormat = "V:|-\(30)-[field(==30)]"
         
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: horizontalConstraintsVisualFormat, options: [], metrics: nil, views: views)
@@ -123,7 +147,22 @@ extension NewMnemonicViewController {
         constraints.append(contentsOf: verticalConstraints)
         
         return constraints
-
     }
     
+    func constraintsForQRButton(button: UIButton) -> [NSLayoutConstraint] {
+        var constraints = [NSLayoutConstraint]()
+        
+        let views = ["button": button]
+        
+        let horizontalConstraintsVisualFormat = "H:[button(40)]-\(10)-|"
+        let verticalConstraintsVisualFormat = "V:|-\(25)-[button(==40)]"
+        
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: horizontalConstraintsVisualFormat, options: [], metrics: nil, views: views)
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: verticalConstraintsVisualFormat, options: [], metrics: nil, views: views)
+        
+        constraints.append(contentsOf: horizontalConstraints)
+        constraints.append(contentsOf: verticalConstraints)
+        
+        return constraints
+    }
 }
