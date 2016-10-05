@@ -122,6 +122,11 @@ extension NewMnemonicViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Check we are editing the Mnemonic field, else allows any characters.
+        if textField != mnemonicField {
+            return true
+        }
+        
         // If the string is an empty space we consider this a return.
         if string == " " {
             addPossibleWord(word: textField.text)
@@ -143,14 +148,15 @@ extension NewMnemonicViewController {
     func setupUI() {
         view.backgroundColor = .white
         
-        addNavButton()
+        configureNavigationItem()
         addTitleTextfield()
         addDescriptionTextfield()
         addMnemonicTextfield(hasQRButton: true)
         addQRButton(leftView: mnemonicField, aboveView: descriptionField)
     }
     
-    private func addNavButton() {
+    private func configureNavigationItem() {
+        navigationItem.title = "New Mnemonic"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonPressed))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelButtonPressed))
     }
@@ -190,10 +196,10 @@ extension NewMnemonicViewController {
     func constraintsForTextField(field: UITextField, hasQRButton: Bool, aboveView: UIView?) -> [NSLayoutConstraint] {
         var constraints = [NSLayoutConstraint]()
         
-        var views: [String: UIView] = ["field": field]
+        var views: [String: Any] = ["field": field, "topLayoutGuide": topLayoutGuide]
         
         var rightViewString = "-10-|"
-        var aboveViewString = "|-30-"
+        var aboveViewString = "[topLayoutGuide]-30-"
         
         if hasQRButton {
             rightViewString = "-50-|"
