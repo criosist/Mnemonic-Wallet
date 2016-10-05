@@ -55,20 +55,26 @@ class NewMnemonicViewController: UIViewController {
 
         setupUI()
     }
+    
+    func showErronousMnemonicAlert() {
+        let errorAlert = UIAlertController(title: "Error", message: "The word contains illegal characters. (Allowed characters are a - z)", preferredStyle: .alert)
+        errorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(errorAlert, animated: true, completion: nil)
+    }
+}
 
+// Mnemonic Methods
+extension NewMnemonicViewController {
+    
     func validateMnemonicWord(word: String) -> Bool {
         return word.containsOnlyCharacters()
     }
     
-    func addPossibleWord(word: String?) {
+    func attempToAddMnemomicWord(word: String?) {
         guard let word = word else {
             return
         }
         
-        attempToAddMnemomicWord(word: word)
-    }
-    
-    func attempToAddMnemomicWord(word: String) {
         if validateMnemonicWord(word: word) {
             addNewMnemonic(word: word)
         } else {
@@ -80,16 +86,7 @@ class NewMnemonicViewController: UIViewController {
         potentialMnemonic.appendMnemonic(word: word)
         clearTextField(field: mnemonicField)
     }
-    
-    func clearTextField(field: UITextField) {
-        field.text = ""
-    }
-    
-    func showErronousMnemonicAlert() {
-        let errorAlert = UIAlertController(title: "Error", message: "The word contains illegal characters. (Allowed characters are a - z)", preferredStyle: .alert)
-        errorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(errorAlert, animated: true, completion: nil)
-    }
+
 }
 
 // Navigation Button
@@ -116,8 +113,18 @@ extension NewMnemonicViewController {
 // TextField Delegate
 extension NewMnemonicViewController: UITextFieldDelegate {
     
+    func clearTextField(field: UITextField) {
+        field.text = ""
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        addPossibleWord(word: textField.text)
+        if textField == titleField {
+            descriptionField.becomeFirstResponder()
+        } else if textField == descriptionField {
+            mnemonicField.becomeFirstResponder()
+        } else if textField == mnemonicField {
+            attempToAddMnemomicWord(word: textField.text)
+        }
         return false
     }
     
@@ -129,7 +136,7 @@ extension NewMnemonicViewController: UITextFieldDelegate {
         
         // If the string is an empty space we consider this a return.
         if string == " " {
-            addPossibleWord(word: textField.text)
+            attempToAddMnemomicWord(word: textField.text)
             return false
         }
         
