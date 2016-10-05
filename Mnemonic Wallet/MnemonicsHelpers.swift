@@ -30,4 +30,5 @@ class MnemonicsHelpers {
         
         return constraints
     }
+
 }

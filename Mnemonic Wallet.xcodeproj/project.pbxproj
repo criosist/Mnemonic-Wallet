@@ -24,6 +24,7 @@
 		146DFD1F1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD1D1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift */; };
 		146DFD221DA2C3DA00889DE9 /* NewMnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD211DA2C3DA00889DE9 /* NewMnemonicViewController.swift */; };
 		146DFD241DA2C40B00889DE9 /* NewMnemonicNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD231DA2C40B00889DE9 /* NewMnemonicNavigationController.swift */; };
+		146DFD271DA5346E00889DE9 /* String+Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DFD261DA5346E00889DE9 /* String+Mnemonic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		146DFD1D1DA2C04500889DE9 /* Mnemonic+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mnemonic+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		146DFD211DA2C3DA00889DE9 /* NewMnemonicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMnemonicViewController.swift; sourceTree = "<group>"; };
 		146DFD231DA2C40B00889DE9 /* NewMnemonicNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMnemonicNavigationController.swift; sourceTree = "<group>"; };
+		146DFD261DA5346E00889DE9 /* String+Mnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Mnemonic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		143826B61D9C102D007E0D75 /* Mnemonic Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				146DFD251DA5345800889DE9 /* Extensions */,
 				146DFD171D9E9C4E00889DE9 /* Managers */,
 				143826D71D9C1085007E0D75 /* App Delegate */,
 				143826E91D9C2E47007E0D75 /* Helpers */,
@@ -207,6 +210,14 @@
 				146DFD231DA2C40B00889DE9 /* NewMnemonicNavigationController.swift */,
 			);
 			name = NewMnemonicViewController;
+			sourceTree = "<group>";
+		};
+		146DFD251DA5345800889DE9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				146DFD261DA5346E00889DE9 /* String+Mnemonic.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 				146DFD1B1DA2BCB500889DE9 /* PotentialMnemonic.swift in Sources */,
 				143826E81D9C2ACC007E0D75 /* UserAccessManager.swift in Sources */,
 				146DFD241DA2C40B00889DE9 /* NewMnemonicNavigationController.swift in Sources */,
+				146DFD271DA5346E00889DE9 /* String+Mnemonic.swift in Sources */,
 				146DFD191D9E9C6700889DE9 /* MnemonicsTableViewManager.swift in Sources */,
 				143826DF1D9C1D97007E0D75 /* TabBarController.swift in Sources */,
 				143826E51D9C20C4007E0D75 /* TabBarLayout.swift in Sources */,
