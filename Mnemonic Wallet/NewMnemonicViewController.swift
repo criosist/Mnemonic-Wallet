@@ -14,6 +14,9 @@ class NewMnemonicViewController: UIViewController {
     
     lazy var inputField: UITextField = {
         let field = UITextField()
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.applyBorder(color: .black, width: 1)
+        field.applyCornerRadius(radius: 5)
         field.delegate = self
         return field
     }()
@@ -25,6 +28,9 @@ class NewMnemonicViewController: UIViewController {
     }
 
     private func setupUI() {
+        view.backgroundColor = .white
+        
+        addQRButton()
         addTextfield()
     }
     
@@ -33,6 +39,10 @@ class NewMnemonicViewController: UIViewController {
             view.addSubview(inputField)
             NSLayoutConstraint.activate(constraintsForTextField(field: inputField))
         }
+    }
+    
+    private func addQRButton() {
+        
     }
     
     func validateMnemonicWord(word: String) -> Bool {
