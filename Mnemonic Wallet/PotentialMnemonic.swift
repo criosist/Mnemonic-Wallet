@@ -13,7 +13,9 @@ struct PotentialMnemonic {
     var description: String?
     var mnemonic: [String]?
     
-    func appendMnemonic(word: String) {
-        
+    mutating func appendMnemonic(word: String) {
+        if word.containsOnlyCharacters() {
+            mnemonic?.append(word)
+        }
     }
 }
