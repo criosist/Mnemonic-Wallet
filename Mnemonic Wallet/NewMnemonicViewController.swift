@@ -13,32 +13,17 @@ class NewMnemonicViewController: UIViewController {
     var potentialMnemonic = PotentialMnemonic()
     
     lazy var titleField: UITextField = {
-        let field = UITextField()
-        field.translatesAutoresizingMaskIntoConstraints = false
-        field.applyBorder(color: .black, width: 1)
-        field.applyCornerRadius(radius: 5)
-        field.placeholder = "Title"
-        field.delegate = self
+        let field = NewMnemonicViewController.textFieldFactory(placeholder: "Title", borderColor: .black, borderWidth: 1, cornerRadius: 5, delegate: self)
         return field
     }()
     
     lazy var descriptionField: UITextField = {
-        let field = UITextField()
-        field.translatesAutoresizingMaskIntoConstraints = false
-        field.applyBorder(color: .black, width: 1)
-        field.applyCornerRadius(radius: 5)
-        field.placeholder = "Description"
-        field.delegate = self
+        let field = NewMnemonicViewController.textFieldFactory(placeholder: "Description", borderColor: .black, borderWidth: 1, cornerRadius: 5, delegate: self)
         return field
     }()
     
     lazy var mnemonicField: UITextField = {
-        let field = UITextField()
-        field.translatesAutoresizingMaskIntoConstraints = false
-        field.applyBorder(color: .black, width: 1)
-        field.applyCornerRadius(radius: 5)
-        field.placeholder = "Mnemonic Word"
-        field.delegate = self
+        let field = NewMnemonicViewController.textFieldFactory(placeholder: "Mnemonic Word", borderColor: .black, borderWidth: 1, cornerRadius: 5, delegate: self)
         return field
     }()
     
@@ -49,6 +34,15 @@ class NewMnemonicViewController: UIViewController {
         qrButton.addTarget(self, action: #selector(qrButtonPress), for: UIControlEvents.touchUpInside)
         return qrButton
     }()
+    
+    fileprivate class func textFieldFactory(placeholder: String, borderColor: UIColor, borderWidth: CGFloat, cornerRadius: CGFloat, delegate: UITextFieldDelegate) -> UITextField {
+        let field = UITextField()
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.applyBorder(color: borderColor, width: borderWidth)
+        field.applyCornerRadius(radius: cornerRadius)
+        field.placeholder = placeholder
+        return field
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
